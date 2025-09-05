@@ -48,7 +48,7 @@ def create_model_and_transforms(
 
     # Get config from yaml file
     if not os.path.exists(model_cfg_file):
-        raise ValueError(f"Unsupported model name: {model_name}")
+        raise ValueError(f"Unsupported model name: {model_name}, {model_cfg_file}")
     model_cfg = json.load(open(model_cfg_file, "r"))
 
     # Build preprocessing transforms for inference
